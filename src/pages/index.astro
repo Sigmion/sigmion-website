@@ -3,7 +3,6 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -117,16 +116,26 @@ const metadata = {
 
   <!-- Contact Widget ************** -->
 
-  <Features2
-    id="contact"
-    title="Get in Touch"
-    tagline="Contact"
-    items={[
-      {
-        title: 'Email',
-        description: 'contact@sigmion.global',
-        icon: 'tabler:mail',
-      },
-    ]}
-  />
+  <section id="contact" class="relative not-prose scroll-mt-[72px]">
+    <div class="absolute inset-0 pointer-events-none -z-[1]" aria-hidden="true">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-900/50"></div>
+    </div>
+    <div class="relative mx-auto max-w-4xl px-4 md:px-6 py-16 md:py-24 lg:py-32 text-center">
+      <h2 class="text-sm font-semibold mb-2">Contact</h2>
+      <h1 class="text-3xl font-bold sm:text-4xl mb-4 dark:text-white">Get in Touch</h1>
+      <p class="text-muted mb-8 text-lg">Get in touch to learn more</p>
+      <div class="flex justify-center">
+        <a
+          href="mailto:contact@sigmion.global"
+          class="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+          </svg>
+          contact@sigmion.global
+        </a>
+      </div>
+    </div>
+  </section>
 </Layout>
