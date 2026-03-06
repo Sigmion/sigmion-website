@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://sigmion.global/sitemap-index.xml
