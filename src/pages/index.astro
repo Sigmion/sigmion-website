@@ -1,0 +1,132 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Sigmion — Programmable Trust Layer for the Post Truth Era',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: '/#contact',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Programmable Trust Layer<br />for the Post Truth Era
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Meet Cyfron — the solution that brings verifiable trust to every digital interaction.
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="Features"
+    items={[
+      {
+        title: 'Trust Policy Engine',
+        description: 'Define custom trust policies that adapt to your security requirements in real-time.',
+        icon: 'tabler:lock',
+      },
+      {
+        title: 'Content Verification',
+        description: 'Cryptographically verify the authenticity and integrity of digital content instantly.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Instant Access',
+        description: 'Zero-friction integration with millisecond-level decision latency for your systems.',
+        icon: 'tabler:bolt',
+      },
+      {
+        title: 'Developer-Friendly APIs',
+        description: 'Simple, powerful REST and WebSocket APIs with comprehensive documentation.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Cross-Platform Support',
+        description: 'Deploy Cyfron across web, mobile, desktop, and IoT environments seamlessly.',
+        icon: 'tabler:device-desktop',
+      },
+      {
+        title: 'Trust Analytics',
+        description: 'Deep insights into trust patterns, anomalies, and verification metrics across your network.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="how-it-works"
+    title="How It Works"
+    items={[
+      {
+        title: '<span class="font-medium">Define</span>',
+        description:
+          'Set up your trust policies using our intuitive policy language. No cryptography expertise required.',
+        icon: 'tabler:file-settings',
+      },
+      {
+        title: '<span class="font-medium">Verify</span>',
+        description: 'Submit content for verification. Cyfron validates against your policies in milliseconds.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: '<span class="font-medium">Trust</span>',
+        description: 'Receive cryptographic proof of trust. Build applications with confidence in verified data.',
+        icon: 'tabler:lock-check',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started Now',
+        href: '/#contact',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Start Verifying the World with Cyfron </Fragment>
+
+    <Fragment slot="subtitle"> Join forward-thinking teams protecting digital trust </Fragment>
+  </CallToAction>
+
+  <!-- Contact Widget ************** -->
+
+  <Features2
+    id="contact"
+    title="Get in Touch"
+    tagline="Contact"
+    items={[
+      {
+        title: 'Email',
+        description: 'contact@sigmion.global',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>
